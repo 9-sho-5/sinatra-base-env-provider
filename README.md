@@ -45,11 +45,12 @@ bash setup.sh
 #### 方法 1: PowerShell を使う
 
 1. `setup.ps1` を右クリックして「PowerShell で実行」
+> ❗ 文字エンコーディングが`UTF-8`に設定されていない場合は、PowerShellがすぐに閉じてしまう可能性があるので、次のターミナルによる実行を行ってください
 2. またはターミナルで以下を入力：
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope Process
-.\setup.ps1
+Get-Content -Path .\setup.ps1 -Encoding UTF8
 ```
 
 #### 方法 2: Git Bash + Task
